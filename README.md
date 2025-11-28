@@ -57,6 +57,14 @@ in your machine learning projects.
 
 ## Installation<a id="installation"></a>
 
+> **Warning:** To prevent dependency conflicts with other applications on your system, we strongly recommend installing this package inside a <a href="https://docs.python.org/3/library/venv.html">Python Virtual Environment</a>.
+>
+> **If you experience issues with other apps after installing this package globally, please run:**
+> ```bash
+> pip uninstall jax_privacy
+> pip install --upgrade more-itertools jax jaxlib
+> ```
+
 **Note:** to ensure that your installation is compatible with your local
 accelerators such as a GPU, we recommend to first follow the corresponding
 instructions to install [JAX](https://github.com/jax-ml/jax#installation).
