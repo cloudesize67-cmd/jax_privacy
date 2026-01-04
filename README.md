@@ -45,8 +45,9 @@ models, including Large Language Models (LLMs).
     *   **Raw JAX**: Provides the most low-level control. Recommended for
         researchers who want to test out new ideas, people who want to use a
         framework not listed above (e.g. equinox), or people who want a more
-        numpy-like experience.
-        <!-- TODO - b/398715962: add "External Contributions & Design" section, link to readthedocs -->
+        numpy-like experience. See the
+        [library design documentation](https://jax-privacy.readthedocs.io/en/latest/library_design.html)
+        for more details on the library architecture and contribution guidelines.
 
 This new JAX Privacy API aims to provide a more streamlined and robust
 experience for building DP ML models, complementing the existing
