@@ -1,7 +1,7 @@
 # JAX-Privacy: Algorithms for Privacy-Preserving Machine Learning in JAX
 
 | [**Docs**](https://jax-privacy.readthedocs.io/) | [**Library**](#library) | [**Installation**](#installation) |
-[**Reproducing Results**](#reproducing-results) | [**Citing**](#citing) |
+[**Architecture**](#architecture) | [**Reproducing Results**](#reproducing-results) | [**Citing**](#citing) |
 [**Contact**](#contact)
 
 This repository contains:
@@ -92,6 +92,35 @@ git clone https://github.com/google-deepmind/jax_privacy
 cd jax_privacy
 pip install -e .
 ```
+
+## Architecture<a id="architecture"></a>
+
+For a full map of the repository — every module, its purpose, the dependency
+diagram, and the public import paths — see
+[`ARCHITECTURE.md`](ARCHITECTURE.md).
+
+**Top-level layout (2 levels deep):**
+
+```
+jax_privacy/
+├── jax_privacy/            # Core library (accounting, dp_sgd, noise_addition,
+│   │                       #   matrix_factorization, experimental, keras, auditing)
+│   └── __init__.py         # Public API surface
+├── experiments/
+│   └── image_classification/  # DP image-classification research pipeline
+├── examples/               # Standalone scripts and Jupyter notebooks
+├── docs/                   # Sphinx documentation (readthedocs.io)
+├── bibtex/                 # BibTeX citations for published papers
+└── .github/workflows/      # GitHub Actions CI
+```
+
+| Directory | Description |
+|---|---|
+| `jax_privacy/` | Installable core library: DP primitives, noise, matrix mechanisms |
+| `experiments/` | Research training pipeline for image classification |
+| `examples/` | End-to-end usage examples (Keras, Flax Linen, raw JAX) |
+| `docs/` | Sphinx-based project documentation |
+| `bibtex/` | Paper citation files |
 
 ## Reproducing Results<a id="reproducing-results"></a>
 
